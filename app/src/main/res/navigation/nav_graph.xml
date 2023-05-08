@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.hfad.childrenslearningapp.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_colorFragment"
+            app:destination="@id/colorFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_countingFragment"
+            app:destination="@id/countingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_progressFragment"
+            app:destination="@id/progressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/colorFragment"
+        android:name="com.hfad.childrenslearningapp.ColorFragment"
+        android:label="fragment_color"
+        tools:layout="@layout/fragment_color" >
+        <action
+            android:id="@+id/action_colorFragment_to_colorResultsFragment"
+            app:destination="@id/colorResultsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/countingFragment"
+        android:name="com.hfad.childrenslearningapp.CountingFragment"
+        android:label="fragment_counting"
+        tools:layout="@layout/fragment_counting" >
+        <action
+            android:id="@+id/action_countingFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultsFragment"
+        android:name="com.hfad.childrenslearningapp.ResultsFragment"
+        android:label="fragment_results"
+        tools:layout="@layout/fragment_results" >
+        <action
+            android:id="@+id/action_resultsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="gradeCount"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/progressFragment"
+        android:name="com.hfad.childrenslearningapp.ProgressFragment"
+        android:label="fragment_progress"
+        tools:layout="@layout/fragment_progress" >
+        <action
+            android:id="@+id/action_progressFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/colorResultsFragment"
+        android:name="com.hfad.childrenslearningapp.ColorResultsFragment"
+        android:label="ColorResultsFragment" >
+        <argument
+            android:name="gradecolor"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_colorResultsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>

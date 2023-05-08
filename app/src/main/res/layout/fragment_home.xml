@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink"
+    tools:context=".HomeFragment">
+
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="0dp"
+        android:layout_height="149dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="102dp"
+        android:gravity="center"
+        android:text="@string/welcome_what_would_you_like_to_practice_today"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_start_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_countings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:backgroundTint="@color/blue"
+        android:text="@string/start"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_counting"
+        app:layout_constraintStart_toEndOf="@+id/tv_counting" />
+
+    <TextView
+        android:id="@+id/tv_colors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="29dp"
+        android:text="@string/colors"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_counting"
+        app:layout_constraintEnd_toEndOf="@+id/tv_counting" />
+
+    <TextView
+        android:id="@+id/tv_counting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="81dp"
+        android:text="@string/counting"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_check_prog"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_check_prog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="14dp"
+        android:text="@string/check_progress"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_check_prog"
+        app:layout_constraintEnd_toEndOf="@+id/btn_countings" />
+
+    <Button
+        android:id="@+id/btn_check_prog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="97dp"
+        android:backgroundTint="@color/blue"
+        android:text="@string/start_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_check_prog" />
+
+    <Button
+        android:id="@+id/btn_start_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:backgroundTint="@color/blue"
+        android:text="@string/start__"
+        app:layout_constraintStart_toEndOf="@+id/tv_colors"
+        app:layout_constraintTop_toTopOf="@+id/tv_colors" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

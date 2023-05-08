@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink"
+    tools:context=".ResultsFragment">
+
+
+    <TextView
+        android:id="@+id/tv_results_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="71dp"
+        android:layout_marginBottom="84dp"
+        android:text="Results"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_skill_level"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_return_home_results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="65dp"
+        android:backgroundTint="@color/blue"
+        android:text="Return to Home Page"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_amt_correct" />
+
+    <TextView
+        android:id="@+id/tv_skill_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:text="Skill Level:"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/iv_skill_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_results_title" />
+
+    <TextView
+        android:id="@+id/tv_amount_correct_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="29dp"
+        android:text="Amount Correct:"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_amt_correct"
+        app:layout_constraintEnd_toEndOf="@+id/iv_skill_bar"
+        app:layout_constraintTop_toBottomOf="@+id/iv_skill_bar" />
+
+    <TextView
+        android:id="@+id/tv_amt_correct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="122dp"
+        android:text="0"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_return_home_results"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_amount_correct_title" />
+
+    <ImageView
+        android:id="@+id/iv_skill_bar"
+        android:layout_width="239dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="19dp"
+        android:src="@drawable/full_progress"
+        app:layout_constraintBottom_toTopOf="@+id/tv_amount_correct_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_skill_level" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
